@@ -1,0 +1,20 @@
+<?php
+    function newmember_menu() {
+        $items = array();
+        $items['hello_new_member'] = array(
+            'title' => 'Hello New Member!',
+            'page callback' => 'say_hello_new_member',
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+        );
+
+        return $items;
+    }
+
+    function say_hello_new_member() {
+        return '<p>Welcome aboard our new member!</p>';
+    }
+
+    function newmember_user_insert() {
+        $_GET['destination'] = 'hello_new_member';
+    }

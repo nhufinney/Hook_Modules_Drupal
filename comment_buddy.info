@@ -1,0 +1,5 @@
+name = Comment Buddy
+description = Acknowledge comment submission or edit.
+package = Epicodus Examples
+core = 7.x
+files[] = comment_buddy.module

@@ -1,0 +1,30 @@
+<?php
+    function comment_buddy_menu() {
+        $items = array();
+        $items['nice_comment'] = array(
+            'title' => 'You\'ve made a comment!',
+            'page callback' => 'comment_made',
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+        );
+        return $items;
+    }
+
+    function comment_made() {
+        return '<p>Nice!</p>';
+    }
+
+    //hook functions
+
+    function comment_buddy_comment_update(){
+        drupal_set_message("Hi there update!");
+        $_GET['destination'] = 'nice_comment';
+    }
+    function comment_buddy_comment_insert(){
+        drupal_set_message("Hi there new comment!");
+        $_GET['destination'] = 'nice_comment';
+    }
+    function comment_buddy_comment_delete(){
+        drupal_set_message("Hi there, you removed a comment!");
+        $_GET['destination'] = 'nice_comment';
+    }

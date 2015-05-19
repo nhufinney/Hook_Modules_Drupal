@@ -1,0 +1,5 @@
+name = Welcome New Account
+description = Display greetings a new account.
+package = Epicodus Examples
+core = 7.x
+files[] = newmember.module
